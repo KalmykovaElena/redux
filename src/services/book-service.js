@@ -17,7 +17,16 @@ const MOCK_DATA=[
 
  export default class BookService {
 getBooks(){
- return MOCK_DATA
+
+ return new Promise((resolve,reject)=>{
+setTimeout(()=>{
+ if((Math.floor(Math.random()*100)>75)){
+  reject(new Error('Ошибка'))
+ }
+resolve (MOCK_DATA)
+},1000)
+ })
+ // return MOCK_DATA
 }
 }
 

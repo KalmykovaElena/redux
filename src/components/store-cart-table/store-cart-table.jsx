@@ -1,9 +1,10 @@
 import React from 'react';
 import './store-cart-table.css'
+
 const StoreCartTable = () => {
     return (
-        <div  className={'store-cart-table'}>
-           <h2>Order</h2>
+        <div className={'store-cart-table'}>
+            <h2>Order</h2>
             <table className={'table'}>
                 <thead>
                 <tr>
@@ -21,9 +22,15 @@ const StoreCartTable = () => {
                     <td>3</td>
                     <td>100$</td>
                     <td>
-                        <button className={'btn btn-outline-success btn-sm'}><i className={'bi bi-plus-circle'}/></button>
-                        <button className={'btn btn-outline-warning btn-sm'}><i className={'bi bi-dash-circle'}/></button>
-                        <button className={'btn btn-outline-danger btn-sm'}><i className={'bi bi-trash'}/></button>
+                        <button className={'btn btn-outline-success btn-sm'}
+                                onClick={() => console.log('onDecrease')}>
+                            <i className={'bi bi-plus-circle'}/></button>
+                        <button className={'btn btn-outline-warning btn-sm'}
+                                onClick={() => console.log('onDecrease')}>
+                            <i className={'bi bi-dash-circle'}/></button>
+                        <button className={'btn btn-outline-danger btn-sm'}
+                                onClick={() => console.log('onDecrease')}>
+                            <i className={'bi bi-trash'}/></button>
 
                     </td>
                 </tr>

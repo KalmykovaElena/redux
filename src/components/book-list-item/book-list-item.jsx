@@ -10,7 +10,9 @@ const BookListItem = (props) => {
                 <p className={'book-title'}>{props.title}</p>
                 <p className={'book-author'}>{props.author}</p>
                 <p className={'book-price'}>{props.price}</p>
-                <button className={'btn btn-primary add-to-cart'}>Add</button>
+                <button className={'btn btn-primary add-to-cart'}
+                onClick={()=>{props.onAddToCart(props.id)}}
+                >Add</button>
             </div>
         </div>
     );
