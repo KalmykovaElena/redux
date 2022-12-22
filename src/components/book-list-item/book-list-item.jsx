@@ -1,5 +1,6 @@
 import React from 'react';
 import './book-list-item.css'
+
 const BookListItem = (props) => {
     return (
         <div className={'book-list-item'}>
@@ -11,8 +12,12 @@ const BookListItem = (props) => {
                 <p className={'book-author'}>{props.author}</p>
                 <p className={'book-price'}>{props.price}</p>
                 <button className={'btn btn-primary add-to-cart'}
-                onClick={()=>{props.onAddToCart(props.id)}}
-                >Add</button>
+                        onClick={() => {
+                            props.onAddToCart(props.id)
+                        }
+                        }
+                >Add
+                </button>
             </div>
         </div>
     );

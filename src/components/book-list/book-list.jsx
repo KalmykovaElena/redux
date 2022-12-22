@@ -19,13 +19,13 @@ class BookList extends Component {
     }
 
     render() {
-        const {isLoading, hasError, books} = this.props
+        const {isLoading, hasError, books, onAddToCart} = this.props
         if (isLoading) return <Spinner/>
         if (hasError) return <ErrorIndicator/>
         return (<ul className={'book-list'}>
             {books.map(book => {
                 return (<li key={book.id}>
-                    <BookListItem {...book} onAddToCart = {onAddToCart}/>
+                    <BookListItem {...book} onAddToCart={onAddToCart}/>
                 </li>)
             })
             }
@@ -49,11 +49,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     const {service} = ownProps
-    return bindActionCreators( {
+    return {
         fetchBooks: fetchBooks(service, dispatch),
-        onAddToCart:(id)=>dispatch(onAddToCart(id))
-
-    },dispatch)
+        onAddToCart: (id) => dispatch(onAddToCart(id))
+        // onAddToCart
+    }
 }
 // const mapDispatchToProps = {
 //         booksLoading,

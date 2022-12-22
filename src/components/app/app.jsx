@@ -19,8 +19,9 @@ const App = () => {
                             <StoreHeader/>
                             <Switch>
                                 <Route path='/' exact component={HomePage}/>
-                                <Route path='/cart' component={CartPage}/>
+                                {/*<Route path='/cart' component={CartPage}/>*/}
                             </Switch>
+                            <CartPage/>
                           </div>
                     </BrowserRouter>
 

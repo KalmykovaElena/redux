@@ -20,7 +20,7 @@ getBooks(){
 
  return new Promise((resolve,reject)=>{
 setTimeout(()=>{
- if((Math.floor(Math.random()*100)>75)){
+ if((Math.floor(Math.random()*100)>99)){
   reject(new Error('Ошибка'))
  }
 resolve (MOCK_DATA)
